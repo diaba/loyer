@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h3>Add new locataire</h3>
+    </div>
+
+<mat-card>
+    <mat-card-content>
+<form [formGroup]="addLocataireForm" (submit)="create()">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input formControlName="name" matInput placeholder="Nom" type="text">
+       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input formControlName="phone" matInput placeholder="phone" type="tel">
+            <mat-icon>open_in_new</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Date entree</mat-label>
+            <input matInput formControlName="dateEntree" placeholder="date entree" type="date">
+        </mat-form-field>
+    </p>
+    <p>
+        <button type="submit" mat-raised-button color="primary">Create new Locataire</button>
+    </p>
+</form>
+</mat-card-content>
+</mat-card>
+</div>

@@ -1,0 +1,15 @@
+<div class="main-content">
+    
+ <mat-list role="listitem">
+    <mat-list-item  > 
+        <mat-card *ngFor="let locataire of listLocataires"  class="card">
+            <mat-card-title>{{locataire.name}}</mat-card-title>
+            <mat-card-actions class="text-align-center">
+                <a class="ml-3" [routerLink]="['/editLocataire', locataire.id]">Edit</a> |
+                <a class="ml-3" [routerLink]="['/viewLocataire', locataire.id]">View</a> |
+                <a class="ml-3" [routerLink]="['/viewLocataire', locataire.id]">Delete</a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-list-item>
+    </mat-list>
+    </div>

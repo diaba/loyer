@@ -8,14 +8,21 @@ import { EditLocataireComponent } from './locataire/edit-locataire/edit-locatair
 import { ListLocatairesComponent } from './locataire/list-locataires/list-locataires.component';
 import { LocataireComponent } from './locataire/locataire.component';
 import { ViewLocataireComponent } from './locataire/view-locataire/view-locataire.component';
+import { ListComponent } from './loyer/list/list.component';
+import { EditMaisonComponent } from './maison/edit-maison/edit-maison.component';
+import { MaisonComponent } from './maison/maison/maison.component';
 
 const routes: Routes = [
   {path :' ', component: AppComponent},
   {path :'locataire', component: LocataireComponent},
+  {path :'maison', component: MaisonComponent},
+  {path :'editMaison/:id', component: EditMaisonComponent},
   {path :'addLocataire', component: AddLocataireComponent},
   {path :'editLocataire/:id', component: EditLocataireComponent},
   {path :'viewLocataire/:id', component: ViewLocataireComponent},
   {path :'viewLocataires', component: ListLocatairesComponent},
+  // {path :'viewLocataires/:id1/assets/:id2', component: ListComponent},
+  {path :'viewLoyer', component: ListComponent},
   {path :'deleteLocataire', component: DeleteLocataireComponent},
   {path :'home', component: HomeComponent}
 ];

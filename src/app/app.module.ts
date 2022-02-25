@@ -27,6 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS} from '@angular/material/snack-bar';
 import { MaisonComponent } from './maison/maison/maison.component';
+import { EditMaisonComponent } from './maison/edit-maison/edit-maison.component';
+import { ListComponent } from './loyer/list/list.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { MaisonComponent } from './maison/maison/maison.component';
     ListLocatairesComponent,
     SidenavComponent,
     EditLocataireComponent,
-    MaisonComponent
+    MaisonComponent,
+    EditMaisonComponent,
+    ListComponent
   ],
   imports: [
     MatSnackBarModule,

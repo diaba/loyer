@@ -1,1 +1,22 @@
-<p>maison works!</p>
+<div class="main-content">
+    <mat-list role="listitem">
+        <mat-list-item>
+            <mat-card *ngFor="let locataire of listMaison" class="card">
+                <mat-card-title>{{locataire.name}}</mat-card-title>
+                <mat-card-content>{{locataire.localisation}}</mat-card-content>
+                     <mat-card *ngFor="let asset of locataire.assetList" class="card">
+                        <mat-card-title>{{asset.description}}</mat-card-title>
+                            <mat-card *ngFor="let loyer of asset.loyerList" class="card">
+                               <mat-card-title>{{loyer.date}}</mat-card-title>
+                               <mat-card-title>{{loyer.montant}}</mat-card-title>
+                           </mat-card>
+                    </mat-card>
+                <mat-card-actions class="text-align-center">
+                    <a class="ml-3" [routerLink]="['/editMaison', locataire.id]">Edit</a> |
+                    <!-- <a class="ml-3" [routerLink]="['/viewLocataire', locataire.id]">View</a> |
+                    <a class="ml-3" [routerLink]="['/viewLocataire', locataire.id]">Delete</a> -->
+                </mat-card-actions>
+            </mat-card>
+        </mat-list-item>
+    </mat-list>
+</div>

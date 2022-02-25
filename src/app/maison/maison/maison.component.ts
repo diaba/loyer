@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MaisonService } from 'src/app/service/maison.service';
 
 @Component({
   selector: 'app-maison',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maison.component.css']
 })
 export class MaisonComponent implements OnInit {
-
-  constructor() { }
+listMaison: any;
+  constructor(private maisonService: MaisonService) { }
 
   ngOnInit(): void {
+    this.listMaison = this.maisonService.listMaisons()
+    .subscribe(data =>{
+      this.listMaison = data;
+    });
   }
 
 }

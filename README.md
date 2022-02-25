@@ -18,6 +18,9 @@ My goal is to build a fully responsive web application that is secured and that 
 - Create an angular application 
 - Connect the 2 applications
 # User stories
+- As a user, I want to add new locataire so that I can track her/his payment
+- As a user, I want to view all payments so that I can have a sight of all rents.
+- As a user, I want to view monthly rental so that I can detect easily the missing payment
 
 
 # Wireframes
@@ -26,21 +29,19 @@ My goal is to build a fully responsive web application that is secured and that 
 
 ## Endpoints
 
-| Endpoints                                                                        | Methods | Access  |  
-|----------------------------------------------------------------------------------|---------|---------|
-| auth/users/register                                                              | POST    | Public  |
-| auth/users/login                                                                 | POST    | Public  |
-| api/customers                                                                    | PUT     | Public  |
-| api/customers                                                                    | GET     | Public  |
-| api/categories                                                                   | GET     | Public  |
-| api/categories/{categoryId}                                                      | GET     | Public  |
-| api/categories/{categoryId}/meals/{mealId}                                       | GET     | Public  |
-| api/categories/{categoryId}/meals                                                | GET     | Public  |
-| api/meals                                                                        | GET     | Public  |
-| api/orders                                                                       | POST    | Private |
+| Endpoints                                                                        | Methods |  
+|----------------------------------------------------------------------------------|---------|
+| api/loyers                                                                       | POST    |   
+| api/loyers                                                                       | GET     |   
+| api/locataires                                                                   | POST    | 
+| api/locataires                                                                   | GET     |   
+| api/maisons/{maisonId}/assets                                                    | PUT     | 
+| api/maisons/{maisonId}/assets                                                    | GET     | 
+| api/maisons/{maisonId}/assets                                                    | POST    | 
+
 
 ## Project Challenges
-
+- 
 
 ##### Back-end
 - Java SpringBoot
